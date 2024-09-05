@@ -36,7 +36,7 @@
 *.npy
 *.err
 *.out
-*.pdf
+# *.pdf
 *.dat
 *.mat
 *.mathcha
