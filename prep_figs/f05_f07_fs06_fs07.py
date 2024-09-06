@@ -366,7 +366,7 @@ def plot_fig(path_coll, site_id, model_name, op_folder, filename_order, full_sit
         per_site_yr_res_dict,
         per_site_yr_qc_mod_perform_dict,
         model_name,
-        r"\textbf{(a) Per site year optimization}",
+        r"\textbf{(a) Per site--year parameterization}",
     )
     # create the subplots
     create_ax_gpp_ts(
@@ -374,28 +374,28 @@ def plot_fig(path_coll, site_id, model_name, op_folder, filename_order, full_sit
         per_site_iav_res_dict,
         per_site_iav_qc_mod_perform_dict,
         model_name,
-        r"\textbf{(b) Per site optimization using} $\mathbf{Cost^{IAV}}$",
+        r"\textbf{(b) Per site parameterization using} $\mathbf{Cost^{IAV}}$",
     )
     create_ax_gpp_ts(
         ax3,
         per_site_res_dict,
         per_site_qc_mod_perform_dict,
         model_name,
-        r"\textbf{(c) Per site optimization}",
+        r"\textbf{(c) Per site parameterization}",
     )
     create_ax_gpp_ts(
         ax4,
         per_pft_res_dict,
         per_pft_qc_mod_perform_dict,
         model_name,
-        r"\textbf{(d) Per PFT optimization}",
+        r"\textbf{(d) Per PFT parameterization}",
     )
     create_ax_gpp_ts(
         ax5,
         glob_opti_res_dict,
         glob_opti_qc_mod_perform_dict,
         model_name,
-        r"\textbf{(e) Global optimization}",
+        r"\textbf{(e) Global parameterization}",
     )
 
     fig.delaxes(ax6)  # remove the last subplot

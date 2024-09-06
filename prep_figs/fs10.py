@@ -324,7 +324,7 @@ def plot_axs(
 
     axs.tick_params(axis="both", which="major", labelsize=38)
     axs.set_xlabel(
-        "Optimization type",
+        "Parameterization strategies",
         fontdict={"style": "italic", "size": 40},
     )
     axs.set_ylabel(

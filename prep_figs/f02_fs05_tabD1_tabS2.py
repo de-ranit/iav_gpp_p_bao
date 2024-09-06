@@ -270,7 +270,7 @@ def plot_axs(
         color="white",
         edgecolor="white",
     )
-    ax.lines[2].set_color("#D55E00")
+    ax.lines[2].set_color("#BBBBBB")
 
     sns.histplot(
         x=nnse_glob,
@@ -301,7 +301,7 @@ def plot_axs(
     # add vertical lines for the median values
     ax.axvline(x=np.median(nnse_syr), linestyle=":", color="#56B4E9")
     ax.axvline(x=np.median(nnse_allyr), linestyle=":", color="#009E73")
-    ax.axvline(x=np.median(nnse_pft), linestyle=":", color="#D55E00")
+    ax.axvline(x=np.median(nnse_pft), linestyle=":", color="#BBBBBB")
     ax.axvline(x=np.median(nnse_glob), linestyle=":", color="#CC79A7")
     ax.axvline(x=np.median(nnse_allyr_iav), linestyle=":", color="#E6C300")
 
@@ -590,7 +590,7 @@ def plot_fig_main(result_paths):
     fig.subplots_adjust(hspace=0.4)
 
     # Adding legend manually
-    colors = ["#56B4E9", "#E6C300", "#009E73", "#D55E00", "#CC79A7"]
+    colors = ["#56B4E9", "#E6C300", "#009E73", "#BBBBBB", "#CC79A7"]
     legend_elements = [
         Line2D(
             [0],
@@ -603,11 +603,11 @@ def plot_fig_main(result_paths):
         )
         for i, opti_type in enumerate(
             [
-                r"per site--year optimization",
-                r"per site optimization using $Cost^{IAV}$",
-                "per site optimization",
-                "per PFT optimization",
-                "global optimization",
+                r"per site--year parameterization",
+                r"per site parameterization using $Cost^{IAV}$",
+                "per site parameterization",
+                "per PFT parameterization",
+                "global parameterization",
             ]
         )
     ]
@@ -783,7 +783,7 @@ def plot_fig_main(result_paths):
     fig.supylabel("Fraction of" + r" sites [\%]", x=0.07, fontsize=36)
 
     # Adding legend manually
-    colors = ["#56B4E9", "#E6C300", "#009E73", "#D55E00", "#CC79A7"]
+    colors = ["#56B4E9", "#E6C300", "#009E73", "#BBBBBB", "#CC79A7"]
     legend_elements = [
         Line2D(
             [0],
@@ -796,11 +796,11 @@ def plot_fig_main(result_paths):
         )
         for i, opti_type in enumerate(
             [
-                r"per site--year optimization",
-                r"per site optimization using $Cost^{IAV}$",
-                "per site optimization",
-                "per PFT optimization",
-                "global optimization",
+                r"per site--year parameterization",
+                r"per site parameterization using $Cost^{IAV}$",
+                "per site parameterization",
+                "per PFT parameterization",
+                "global parameterization",
             ]
         )
     ]

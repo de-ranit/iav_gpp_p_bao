@@ -29,9 +29,7 @@ matplotlib.rcParams["text.usetex"] = True
 matplotlib.rcParams["text.latex.preamble"] = (
     r"\renewcommand{\familydefault}{\sfdefault}"  # use sans-serif font
 )
-matplotlib.rcParams["text.latex.preamble"] = (
-    r"\usepackage{amsmath}"  # use amsmath
-)
+matplotlib.rcParams["text.latex.preamble"] = r"\usepackage{amsmath}"  # use amsmath
 
 # set the font to computer modern sans
 matplotlib.rcParams["font.family"] = "sans-serif"
@@ -149,7 +147,7 @@ def plot_axs(ax, data_dict, title):
     pft_list = list(data_dict.keys())
 
     # colors for the boxplots (of each optimization experiment)
-    colors = ["#56B4E9", "#009E73", "#D55E00", "#CC79A7"]
+    colors = ["#56B4E9", "#009E73", "#BBBBBB", "#CC79A7"]
 
     # create boxplots
     for ix, pft_name in enumerate(pft_list):
@@ -187,10 +185,9 @@ def plot_axs(ax, data_dict, title):
     ]
     ax.set_xticklabels(xticklabs)
 
-    grid_x = np.arange(4.5,52.0,4)
+    grid_x = np.arange(4.5, 52.0, 4)
     for i in grid_x:
         ax.axvline(i, color="gray", linestyle=(0, (5, 10)))
-
 
     # labeling axes
     ax.set_yticks(list(np.arange(0.0, 1.2, 0.2)))
@@ -198,7 +195,7 @@ def plot_axs(ax, data_dict, title):
     ax.set_yticklabels(yticklabs)
 
     ax.tick_params(axis="both", which="major", labelsize=38)
-    
+
     ax.set_title(
         title,
         fontsize=54,
@@ -231,13 +228,15 @@ def plot_fig(p_mod_res_path_dict, lue_mod_res_path_dict):
         ncols=1, nrows=2, figsize=(40, 24), sharex=True, sharey=True
     )
 
-    plot_axs(axs[0], p_mod_pft_mod_perform_dict, r"(a) P$^{\text{W}}_{\text{hr}}$ model")
+    plot_axs(
+        axs[0], p_mod_pft_mod_perform_dict, r"(a) P$^{\text{W}}_{\text{hr}}$ model"
+    )
     plot_axs(axs[1], lue_mod_pft_mod_perform_dict, r"(b) Bao$_{\text{hr}}$ model")
 
     fig.subplots_adjust(hspace=0.2)
 
     # Adding legend manually
-    colors = ["#56B4E9", "#009E73", "#D55E00", "#CC79A7"]
+    colors = ["#56B4E9", "#009E73", "#BBBBBB", "#CC79A7"]
     legend_elements = [
         Line2D(
             [0],
@@ -250,10 +249,10 @@ def plot_fig(p_mod_res_path_dict, lue_mod_res_path_dict):
         )
         for i, opti_type in enumerate(
             [
-                r"per site--year optimization",
-                "per site optimization",
-                "per PFT optimization",
-                "global optimization",
+                r"per site--year parameterization",
+                "per site parameterization",
+                "per PFT parameterization",
+                "global parameterization",
             ]
         )
     ]

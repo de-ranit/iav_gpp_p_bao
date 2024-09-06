@@ -237,7 +237,7 @@ def plot_axs(axs, in_dict_p, in_dict_lue, var):
     axs.set_xticks(np.arange(1.0, 21.0, 2.0), labels=xlabs, rotation=45, ha="right")
     axs.tick_params(axis="both", which="major", labelsize=35)
     axs.set_xlabel(
-        "Optimization pairs",
+        "Pairs of parameterization strategies",
         fontdict={"style": "italic", "size": 38},
     )
     axs.set_ylabel(
@@ -313,7 +313,7 @@ def plot_fig_between_opti(in_dict_p, in_dict_lue, var, op_filename, op_folder):
     )
 
     # save the figure
-    fig_path = Path("op_folder")
+    fig_path = Path(op_folder)
     os.makedirs(fig_path, exist_ok=True)
     plt.savefig(f"./{op_folder}/{op_filename}.png", dpi=300, bbox_inches="tight")
     plt.savefig(f"./{op_folder}/{op_filename}.pdf", dpi=300, bbox_inches="tight")

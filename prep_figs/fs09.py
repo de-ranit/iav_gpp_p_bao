@@ -195,7 +195,7 @@ def plot_axs(ax, data_dict, title):
     bioclim_list = list(data_dict.keys())
 
     # colors for the boxplots (of each optimization experiment)
-    colors = ["#56B4E9", "#009E73", "#D55E00", "#CC79A7"]
+    colors = ["#56B4E9", "#009E73", "#BBBBBB", "#CC79A7"]
 
     # create boxplots
     for ix, bioclim_name in enumerate(bioclim_list):
@@ -288,7 +288,7 @@ def plot_fig(p_mod_res_path_dict, lue_mod_res_path_dict):
     fig.subplots_adjust(hspace=0.2)
 
     # Adding legend manually
-    colors = ["#56B4E9", "#009E73", "#D55E00", "#CC79A7"]
+    colors = ["#56B4E9", "#009E73", "#BBBBBB", "#CC79A7"]
     legend_elements = [
         Line2D(
             [0],
@@ -301,10 +301,10 @@ def plot_fig(p_mod_res_path_dict, lue_mod_res_path_dict):
         )
         for i, opti_type in enumerate(
             [
-                r"per site--year optimization",
-                "per site optimization",
-                "per PFT optimization",
-                "global optimization",
+                r"per site--year parameterization",
+                "per site parameterization",
+                "per PFT parameterization",
+                "global parameterization",
             ]
         )
     ]

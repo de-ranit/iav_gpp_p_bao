@@ -109,7 +109,6 @@ def collect_data(
     site_data_dict,
     nse_var_name,
 ):
-    
     """
     collect the data for ANOVA analysis for NNSE
 
@@ -520,7 +519,9 @@ def main_prep_nse_anova_tab(
 
     p_model_hr_coll = {}
     for exp, exp_path in hr_p_path.items():
-        p_model_hr_coll[exp] = prep_nse_data(exp_path, site_data_dict, "p", exp, consider_p_hr)
+        p_model_hr_coll[exp] = prep_nse_data(
+            exp_path, site_data_dict, "p", exp, consider_p_hr
+        )
 
     lue_model_hr_coll = {}
     for exp, exp_path in hr_lue_path.items():
@@ -528,7 +529,9 @@ def main_prep_nse_anova_tab(
 
     lue_model_dd_coll = {}
     for exp, exp_path in dd_lue_path.items():
-        lue_model_dd_coll[exp] = prep_nse_data(exp_path, site_data_dict, "lue", exp, consider_p_hr)
+        lue_model_dd_coll[exp] = prep_nse_data(
+            exp_path, site_data_dict, "lue", exp, consider_p_hr
+        )
 
     concat_df_list = []
     for nse_dict in [p_model_hr_coll, lue_model_hr_coll, lue_model_dd_coll]:
@@ -630,6 +633,7 @@ def main_prep_nse_anova_tab(
 
     return percentage_factor_nse_y_dict, percentage_factor_nse_hr_dict
 
+
 def make_fig(
     ss_perc_nse_y_dict_incl_no_sm_p,
     ss_perc_nse_hr_dict_incl_no_sm_p,
@@ -658,16 +662,16 @@ def make_fig(
         ss_perc_nse_y_dict,
         ss_perc_nse_hr_dict,
         ss_perc_nse_y_dict_incl_no_sm_p,
-        ss_perc_nse_hr_dict_incl_no_sm_p,   
+        ss_perc_nse_hr_dict_incl_no_sm_p,
     ]
     dict_name_list = [
-        "Annual NNSE\n" +  r"(excluding P$_{\text{hr}}$ model)",
-        "Hourly NNSE\n" +  r"(excluding P$_{\text{hr}}$ model)",
-        "Annual NNSE\n" +  r"(including P$_{\text{hr}}$ model)",
-        "Hourly NNSE\n" +  r"(including P$_{\text{hr}}$ model)",
+        "Annual NNSE\n" + r"(excluding P$_{\text{hr}}$ model)",
+        "Hourly NNSE\n" + r"(excluding P$_{\text{hr}}$ model)",
+        "Annual NNSE\n" + r"(including P$_{\text{hr}}$ model)",
+        "Hourly NNSE\n" + r"(including P$_{\text{hr}}$ model)",
     ]
     dict_keys = list(ss_perc_nse_y_dict_incl_no_sm_p.keys())
-    colors = ["#3498db", "#e74c3c", "#2ecc71", "#f1c40f", "#9b59b6", "#34495e"]
+    colors = ["#3498db", "#BBBBBB", "#2ecc71", "#f1c40f", "#9b59b6", "#34495e"]
 
     # set the figure size
     fig_width = 8  # Width in inches
@@ -678,17 +682,17 @@ def make_fig(
 
     for i, d in enumerate(data_dicts_list):
         for j, key in enumerate(dict_keys):
-            axs.plot(d[key], i, 'o', color=colors[j], markersize=8, alpha=0.8)
+            axs.plot(d[key], i, "o", color=colors[j], markersize=8, alpha=0.8)
 
     # Set y-axis labels
-    axs.set_yticks([0,1,2,3])
+    axs.set_yticks([0, 1, 2, 3])
     axs.set_yticklabels(dict_name_list)
 
     # Set labels
-    axs.set_xlabel(r'Percentage contribution to sum of squares [\%]', fontsize=22)
-    axs.set_ylabel('Model performances [-]', fontsize=22)
+    axs.set_xlabel(r"Percentage contribution to sum of squares [\%]", fontsize=22)
+    axs.set_ylabel("Model performances [-]", fontsize=22)
 
-    axs.tick_params(axis='both', which='major', labelsize=18)
+    axs.tick_params(axis="both", which="major", labelsize=18)
 
     # create a legend
     legend_elements = [
@@ -707,8 +711,8 @@ def make_fig(
             [0],
             marker="o",
             color="w",
-            label="Optimization strategy",
-            markerfacecolor="#e74c3c",
+            label="Parameterization strategy",
+            markerfacecolor="#BBBBBB",
             markersize=10,
             alpha=0.8,
         ),
