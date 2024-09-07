@@ -43,9 +43,7 @@ TBD BibTex contents
 ```
 @software{de_2024_13729515,
   author       = {De, Ranit},
-  title        = {{Scripts for analyses presented in "Addressing 
-                   challenges in simulating inter–annual variability
-                   of gross primary production"}},
+  title        = {{Scripts for analyses presented in "Addressing challenges in simulating inter–annual variability of gross primary production"}},
   month        = sep,
   year         = 2024,
   publisher    = {Zenodo},
