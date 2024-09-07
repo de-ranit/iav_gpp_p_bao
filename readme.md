@@ -41,7 +41,21 @@ TBD BibTex contents
 
 * This repository:
 ```
-TBD BibTex contents
+@software{de_2024_13729515,
+  author       = {De, Ranit},
+  title        = {{Scripts for analyses presented in "Addressing 
+                   challenges in simulating inter–annual variability
+                   of gross primary production"}},
+  month        = sep,
+  year         = 2024,
+  publisher    = {Zenodo},
+  version      = {preprint},
+  doi          = {10.5281/zenodo.13729515},
+  url          = {https://doi.org/10.5281/zenodo.13729515}
+}
+```
+```
+De, R. (2024). Scripts for analyses presented in "Addressing challenges in simulating inter–annual variability of gross primary production" (preprint). Zenodo. https://doi.org/10.5281/zenodo.13729515
 ```
 
 # License
