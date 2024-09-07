@@ -1,6 +1,11 @@
 [![DOI](https://zenodo.org/badge/853696566.svg)](https://zenodo.org/doi/10.5281/zenodo.13729514)
+
+# Addressing Challenges in Simulating Inter–annual Variability of Gross Primary Production
+![alt text](https://github.com/de-ranit/iav_gpp_p_bao/blob/main/prep_figs/figures/f01.png?raw=true)
+
+
 # Description
-This repository contains codes to perform analysis and reproduce figures of the following research paper.
+This repository contains codes to perform analysis and reproduce figures of our research paper:
 
 `citation to be entered`
 
