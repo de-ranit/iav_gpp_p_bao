@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/853696566.svg)](https://zenodo.org/doi/10.5281/zenodo.13729514)
 # Description
 This repository contains codes to perform analysis and reproduce figures of the following research paper.
 
