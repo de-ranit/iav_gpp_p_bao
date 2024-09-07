@@ -34,24 +34,31 @@ The codes are written to be compatible with computing platforms and filestructur
 - Run `main_opti_and_run_model.py` (except PFT specific optimization). For PFT specific optimization, run `submit_pft_opti_jobs.py`. If you want parallel processing on a high performance computing (HPC) platform, other settings are necessary based on the platform you are using. PFT specific optimization and global optimization can only be performed using parallel processing on a HPC as multi-site data must be used. See `send_slurm_job.sh` for a sample job submission recipie to a HPC platform using [`slurm`](https://slurm.schedmd.com/overview.html) as a job scheduler.
 
 # How to cite?
-* Research paper:
+**Research paper:**
+  - BibTeX
 ```
-TBD BibTex contents
+TBD
+```
+  - APA
+```
+TBD
 ```
 
-* This repository:
+**This repository:**
+  - BibTeX
 ```
-@software{de_2024_13729515,
+@software{De2024Codes,
   author       = {De, Ranit},
-  title        = {{Scripts for analyses presented in "Addressing challenges in simulating inter–annual variability of gross primary production"}},
+  title        = {{Scripts for analyses presented in ``Addressing challenges in simulating inter–annual variability of gross primary production''}},
   month        = sep,
   year         = 2024,
   publisher    = {Zenodo},
   version      = {preprint},
   doi          = {10.5281/zenodo.13729515},
-  url          = {https://doi.org/10.5281/zenodo.13729515}
+  url          = {https://github.com/de-ranit/iav_gpp_p_bao}
 }
 ```
+  - APA
 ```
 De, R. (2024). Scripts for analyses presented in "Addressing challenges in simulating inter–annual variability of gross primary production" (preprint). Zenodo. https://doi.org/10.5281/zenodo.13729515
 ```
