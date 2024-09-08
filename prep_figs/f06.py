@@ -153,7 +153,10 @@ def plot_axs(x, y, axs, lim, title):
 
     axs.plot(x, fit_line, color="red", linestyle="--", dashes=(1.6, 4))
 
-    axs.text(1, 7, f"y = {round(coeff[0],3)}x + {round(coeff[1],3)}", fontsize=18)
+    if round(coeff[1],3) < 0.0:
+        axs.text(1, 7, f"y = {round(coeff[0],3)}x - {abs(round(coeff[1],3))}", fontsize=18)
+    else:
+        axs.text(1, 7, f"y = {round(coeff[0],3)}x + {round(coeff[1],3)}", fontsize=18)
 
     sns.despine(ax=axs, top=True, right=True)
 
@@ -192,15 +195,15 @@ def plot_fig_main(lue_hr_data_exp_path, lue_dd_data_exp_path):
 
     # add the scatter plots
     plot_axs(
-        hr_gpp_obs_yr_arr,
         hr_gpp_sim_yr_arr,
+        hr_gpp_obs_yr_arr,
         axs[0],
         (min_gpp_hr, max_gpp_hr),
         r"(a) Bao$_{\text{hr}}$ model",
     )
     plot_axs(
-        dd_gpp_obs_yr_arr,
         dd_gpp_sim_yr_arr,
+        dd_gpp_obs_yr_arr,
         axs[1],
         (min_gpp_dd, max_gpp_dd),
         r"(b) Bao$_{\text{dd}}$ model",
@@ -242,7 +245,7 @@ def plot_fig_main(lue_hr_data_exp_path, lue_dd_data_exp_path):
 
     fig.supxlabel(
         (
-            r"Annual average $\text{GPP}_{\text{EC}}$"
+            r"Annual average $\text{GPP}_{\text{sim}}$"
             "\n"
             r"[$\mathrm{\mu} \text{mol CO}_2 \cdot \text{m}^{-2}\cdot \text{s}^{-1}$]"
         ),
@@ -252,7 +255,7 @@ def plot_fig_main(lue_hr_data_exp_path, lue_dd_data_exp_path):
     )
     fig.supylabel(
         (
-            r"Annual average $\text{GPP}_{\text{sim}}$"
+            r"Annual average $\text{GPP}_{\text{EC}}$"
             "\n"
             r"[$\mathrm{\mu} \text{mol CO}_2 \cdot \text{m}^{-2}\cdot \text{s}^{-1}$]"
         ),

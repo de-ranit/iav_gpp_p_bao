@@ -167,7 +167,10 @@ def plot_axs(x, y, z, axs, lim, title):
     fit_line = coeff[0] * x + coeff[1]
 
     axs.plot(x, fit_line, color="red", linestyle="--", dashes=(1.6, 4))
-    axs.text(1, 10.6, f"y = {round(coeff[0],3)}x + {round(coeff[1],3)}", fontsize=22)
+    if round(coeff[1],3) < 0:
+        axs.text(1, 10.6, f"y = {round(coeff[0],3)}x - {abs(round(coeff[1],3))}", fontsize=22)
+    else:
+        axs.text(1, 10.6, f"y = {round(coeff[0],3)}x + {round(coeff[1],3)}", fontsize=22)
 
     sns.despine(ax=axs, top=True, right=True)
 
@@ -218,16 +221,16 @@ def plot_fig_main(p_mod_res_path):
 
     # add the scatter plots
     scatter = plot_axs(
-        gpp_obs_yr_arr,
         gpp_sim_no_moisture_stress_yr_arr,
+        gpp_obs_yr_arr,
         ai_arr,
         axs[0],
         (min_gpp_no_moisture, max_gpp_no_moisture),
         r"(a) P$_{\text{hr}}$ model",
     )
     plot_axs(
-        gpp_obs_yr_arr,
         gpp_sim_yr_arr,
+        gpp_obs_yr_arr,
         ai_arr,
         axs[1],
         (min_gpp, max_gpp),
@@ -271,8 +274,6 @@ def plot_fig_main(p_mod_res_path):
 
     plt.legend(
         handles=legend_elements,
-        # title="Legend",
-        # title_fontsize=22,
         fontsize=24,
         loc="lower center",
         ncol=len(legend_elements),
@@ -282,9 +283,9 @@ def plot_fig_main(p_mod_res_path):
 
     fig.supxlabel(
         (
-            r"Annual average $\text{GPP}_{\text{EC}}$"
+            r"Annual average $\text{GPP}_{\text{sim}}$"
             "\n"
-            r"[$\mathrm{\mu} \text{mol CO}_2 \cdot \text{m}^{-2}\cdot \text{s}^{-1}$]"
+            r"[$\mathrm{\mu} \text{mol CO}_2 \cdot \text{m}^{-2}\cdot \text{s}^{-1}$]" 
         ),
         y=-0.12,
         x=0.44,
@@ -292,9 +293,9 @@ def plot_fig_main(p_mod_res_path):
     )
     fig.supylabel(
         (
-            r"Annual average $\text{GPP}_{\text{sim}}$"
+            r"Annual average $\text{GPP}_{\text{EC}}$"
             "\n"
-            r"[$\mathrm{\mu} \text{mol CO}_2 \cdot \text{m}^{-2}\cdot \text{s}^{-1}$]"
+            r"[$\mathrm{\mu} \text{mol CO}_2 \cdot \text{m}^{-2}\cdot \text{s}^{-1}$]" 
         ),
         x=0.03,
         fontsize = 30
