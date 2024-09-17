@@ -72,14 +72,14 @@ Primary Production, ESS Open Archive, 2024, 1–42, https://doi.org/10.22541/ess
   month        = sep,
   year         = 2024,
   publisher    = {Zenodo},
-  version      = {preprint v1.1},
+  version      = {v1.1-preprint},
   doi          = {10.5281/zenodo.13729515},
   url          = {https://github.com/de-ranit/iav_gpp_p_bao}
 }
 ```
   - APA
 ```
-De, R. (2024). Scripts for analyses presented in "Addressing challenges in simulating inter–annual variability of gross primary production" (preprint v1.1). Zenodo. https://doi.org/10.5281/zenodo.13729515
+De, R. (2024). Scripts for analyses presented in "Addressing challenges in simulating inter–annual variability of gross primary production" (v1.1-preprint). Zenodo. https://doi.org/10.5281/zenodo.13729515
 ```
 
 # License
