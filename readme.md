@@ -7,7 +7,10 @@ Created in BioRender. De, R. (2024) https://BioRender.com/i01x768
 # Description
 This repository contains codes to perform analysis and reproduce figures of our research paper:
 
-`citation to be entered`
+```
+De, R., Bao, S., Koirala, S., Brenning, A., Reichstein, M., Tagesson, T., Liddell, M., Ibrom, A., Wolf, S., Šigut, L., Hörtnagl, L., Woodgate, W., Korkiakoski, M., Merbold, L., Black, T. A., Roland, M., Klosterhalfen, A., Blanken, P. D., Knox, S., Sabbatini, S., Gielen, B., Montagnani, L., Fensholt, R., Wohlfahrt, G., Desai, A. R., Paul-Limoges, E., Galvagno, M., Hammerle, A., Jocher, G., Ruiz Reverter, B., Holl, D., Chen, J., Vitale, L., Arain, M. A., and Carvalhais, N.: Addressing Challenges in Simulating Inter–annual Variability of Gross
+Primary Production, ESS Open Archive, 2024, 1–42, https://doi.org/10.22541/essoar.172656939.93739740/v1, 2024.
+```
 
 We used majorly the following two models in our study. It is highly recommended to get acquainted with the following two research papers before using our codes.
 
@@ -43,11 +46,21 @@ The codes are written to be compatible with computing platforms and filestructur
 **Research paper:**
   - BibTeX
 ```
-TBD
+@Article{De_IAV_GPP_2024,
+AUTHOR = {De, R. and Bao, S. and Koirala, S. and Brenning, A. and Reichstein, M. and Tagesson, T. and Liddell, M. and Ibrom, A. and Wolf, S. and Šigut, L. and Hörtnagl, L. and Woodgate, W. and Korkiakoski, M. and Merbold, L. and Black, T. A. and Roland, M. and Klosterhalfen, A. and Blanken, P. D. and Knox, S. and Sabbatini, S. and Gielen, B. and Montagnani, L. and Fensholt, R. and Wohlfahrt, G. and Desai, A. R. and Paul-Limoges, E. and Galvagno, M. and Hammerle, A. and Jocher, G. and Ruiz Reverter, B. and Holl, D. and Chen, J. and Vitale, L. and Arain, M. A. and Carvalhais, N.},
+TITLE = {{Addressing Challenges in Simulating Inter–annual Variability of Gross Primary Production}},
+JOURNAL = {{ESS Open Archive}},
+VOLUME = {2024},
+YEAR = {2024},
+PAGES = {1--42},
+URL = {https://essopenarchive.org/doi/full/10.22541/essoar.172656939.93739740/v1},
+DOI = {10.22541/essoar.172656939.93739740/v1}
+}
 ```
   - APA
 ```
-TBD
+De, R., Bao, S., Koirala, S., Brenning, A., Reichstein, M., Tagesson, T., Liddell, M., Ibrom, A., Wolf, S., Šigut, L., Hörtnagl, L., Woodgate, W., Korkiakoski, M., Merbold, L., Black, T. A., Roland, M., Klosterhalfen, A., Blanken, P. D., Knox, S., Sabbatini, S., Gielen, B., Montagnani, L., Fensholt, R., Wohlfahrt, G., Desai, A. R., Paul-Limoges, E., Galvagno, M., Hammerle, A., Jocher, G., Ruiz Reverter, B., Holl, D., Chen, J., Vitale, L., Arain, M. A., and Carvalhais, N.: Addressing Challenges in Simulating Inter–annual Variability of Gross
+Primary Production, ESS Open Archive, 2024, 1–42, https://doi.org/10.22541/essoar.172656939.93739740/v1, 2024.
 ```
 
 **This repository:**
