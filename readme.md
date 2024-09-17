@@ -46,15 +46,15 @@ The codes are written to be compatible with computing platforms and filestructur
 **Research paper:**
   - BibTeX
 ```
-@Article{De_IAV_GPP_2024,
-AUTHOR = {De, R. and Bao, S. and Koirala, S. and Brenning, A. and Reichstein, M. and Tagesson, T. and Liddell, M. and Ibrom, A. and Wolf, S. and Šigut, L. and Hörtnagl, L. and Woodgate, W. and Korkiakoski, M. and Merbold, L. and Black, T. A. and Roland, M. and Klosterhalfen, A. and Blanken, P. D. and Knox, S. and Sabbatini, S. and Gielen, B. and Montagnani, L. and Fensholt, R. and Wohlfahrt, G. and Desai, A. R. and Paul-Limoges, E. and Galvagno, M. and Hammerle, A. and Jocher, G. and Ruiz Reverter, B. and Holl, D. and Chen, J. and Vitale, L. and Arain, M. A. and Carvalhais, N.},
-TITLE = {{Addressing Challenges in Simulating Inter–annual Variability of Gross Primary Production}},
-JOURNAL = {{ESS Open Archive}},
-VOLUME = {2024},
-YEAR = {2024},
-PAGES = {1--42},
-URL = {https://essopenarchive.org/doi/full/10.22541/essoar.172656939.93739740/v1},
-DOI = {10.22541/essoar.172656939.93739740/v1}
+@article{De_IAV_GPP_2024,
+  author = {De, R. and Bao, S. and Koirala, S. and Brenning, A. and Reichstein, M. and Tagesson, T. and Liddell, M. and Ibrom, A. and Wolf, S. and Šigut, L. and Hörtnagl, L. and Woodgate, W. and Korkiakoski, M. and Merbold, L. and Black, T. A. and Roland, M. and Klosterhalfen, A. and Blanken, P. D. and Knox, S. and Sabbatini, S. and Gielen, B. and Montagnani, L. and Fensholt, R. and Wohlfahrt, G. and Desai, A. R. and Paul-Limoges, E. and Galvagno, M. and Hammerle, A. and Jocher, G. and Ruiz Reverter, B. and Holl, D. and Chen, J. and Vitale, L. and Arain, M. A. and Carvalhais, N.},
+  title = {{Addressing Challenges in Simulating Inter–annual Variability of Gross Primary Production}},
+  journal = {{ESS Open Archive}},
+  volume = {2024},
+  year = {2024},
+  pages = {1--42},
+  url = {https://essopenarchive.org/doi/full/10.22541/essoar.172656939.93739740/v1},
+  doi = {10.22541/essoar.172656939.93739740/v1}
 }
 ```
   - APA
